@@ -122,26 +122,26 @@ const About: React.FC = () => {
 
                 {/* Grid de Fotos: Estádio + Estúdio */}
                 <div className="grid grid-cols-2 gap-4 mt-8">
-                     {/* Foto 1: Estádio - Se falhar, usa imagem de show */}
+                     {/* Foto 1: Estádio - Caminho Absoluto */}
                      <div className="relative h-64 w-full bg-black overflow-hidden border border-white/10">
                         <img 
                             src="/foto_estadio.jpg"
                             onError={(e) => {
-                                e.currentTarget.src = "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=800&auto=format&fit=crop";
-                                e.currentTarget.onerror = null;
+                                console.error("Foto estadio não encontrada na pasta public");
+                                e.currentTarget.style.opacity = "0.3";
                             }}
                             className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700" 
                             alt="Emerson Porfa - Live Show"
                         />
                      </div>
 
-                     {/* Foto 2: Estúdio - Se falhar, usa imagem de console */}
+                     {/* Foto 2: Estúdio - Caminho Absoluto */}
                      <div className="relative h-64 w-full bg-black overflow-hidden border border-white/10">
                         <img 
                             src="/foto_estudio.jpg"
                             onError={(e) => {
-                                e.currentTarget.src = "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=800&auto=format&fit=crop";
-                                e.currentTarget.onerror = null;
+                                console.error("Foto estudio não encontrada na pasta public");
+                                e.currentTarget.style.opacity = "0.3";
                             }}
                             className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700" 
                             alt="Emerson Porfa - Studio"

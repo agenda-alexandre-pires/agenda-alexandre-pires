@@ -20,6 +20,7 @@ const Hero: React.FC = () => {
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold text-white mb-6 leading-[0.9] tracking-tighter">
             EMERSON<br/>
+            {/* CORREÇÃO: Removido gradiente e usado cor sólida (text-neutral-200) para garantir que apareça */}
             <span className="text-neutral-200">PORFA</span>
           </h1>
 
@@ -47,14 +48,13 @@ const Hero: React.FC = () => {
              {/* Decorative Frame */}
              <div className="absolute top-4 -right-4 w-full h-full border-2 border-white/20 z-0 hidden md:block"></div>
              
-             {/* IMAGEM: Tenta carregar local, se falhar usa Unsplash */}
+             {/* IMAGEM: Caminho absoluto apontando para a raiz pública */}
              <div className="relative w-full h-full bg-black overflow-hidden shadow-2xl z-10">
                  <img 
                    src="/foto_pessoal.jpg"
                    onError={(e) => {
-                     // Se a foto pessoal não existir, carrega uma foto genérica de estúdio de alta qualidade
-                     e.currentTarget.src = "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop";
-                     e.currentTarget.onerror = null; // Previne loop infinito
+                     console.error("Erro ao carregar imagem principal. Verifique se foto_pessoal.jpg está na pasta public.");
+                     e.currentTarget.style.opacity = "0.5"; // Feedback visual se falhar
                    }}
                    alt="Emerson Porfa - Engenheiro de Áudio" 
                    className="w-full h-full object-cover object-center opacity-80 hover:opacity-100 transition-opacity duration-700"

@@ -25,7 +25,7 @@ const Portfolio: React.FC = () => {
            <p className="text-neutral-500 font-display tracking-widest uppercase">Trabalhos Selecionados</p>
         </div>
 
-        {/* YouTube Grid */}
+        {/* YouTube Grid - Layout Flex para centralizar o último item */}
         <div className="mb-24 reveal delay-100">
           <h3 className="text-xl font-display font-bold text-white uppercase tracking-widest mb-8 border-l-4 border-white pl-4">Vídeos</h3>
           
@@ -47,17 +47,17 @@ const Portfolio: React.FC = () => {
           </div>
         </div>
 
-        {/* Spotify Section - Ajustado altura para não cortar */}
+        {/* Spotify Section */}
         <div className="reveal delay-200">
           <h3 className="text-xl font-display font-bold text-white uppercase tracking-widest mb-8 border-l-4 border-white pl-4">Álbuns</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-neutral-900 border border-white/10 p-1 hover:border-white/30 transition-colors rounded-xl overflow-hidden shadow-lg h-[352px]">
+            <div className="bg-neutral-900 border border-white/10 p-1 hover:border-white/30 transition-colors rounded-xl overflow-hidden shadow-lg h-[160px]">
                 <iframe 
                     style={{borderRadius: '12px'}} 
                     src="https://open.spotify.com/embed/album/3X5wz47oetvo2EMcViUnWs?utm_source=generator&theme=0" 
                     width="100%" 
-                    height="352" 
+                    height="152" 
                     frameBorder="0" 
                     allowFullScreen 
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -66,12 +66,12 @@ const Portfolio: React.FC = () => {
                 ></iframe>
             </div>
 
-            <div className="bg-neutral-900 border border-white/10 p-1 hover:border-white/30 transition-colors rounded-xl overflow-hidden shadow-lg h-[352px]">
+            <div className="bg-neutral-900 border border-white/10 p-1 hover:border-white/30 transition-colors rounded-xl overflow-hidden shadow-lg h-[160px]">
                 <iframe 
                     style={{borderRadius: '12px'}} 
                     src="https://open.spotify.com/embed/album/1SMRpldg9K9lWoGw0r1J2w?utm_source=generator&theme=0" 
                     width="100%" 
-                    height="352" 
+                    height="152" 
                     frameBorder="0" 
                     allowFullScreen 
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
